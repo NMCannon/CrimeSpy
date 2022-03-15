@@ -74,3 +74,9 @@ code {
   margin-right: 800px;
   float: left;
 }
+
+#sidebar {
+  float: left;
+  border: 2px solid green;
+  padding: 20px;
+}

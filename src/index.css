@@ -20,8 +20,8 @@ code {
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin-right: 3%;
+    margin-left: 3%;
     text-decoration: none;
     background: rgb(43, 43, 46);
     color: white;
@@ -56,13 +56,14 @@ code {
 
 #header-container {
   border: 2px solid red;
-  padding: 20px;
+  padding: 1%;
   overflow: hidden;
+  width: 100%;
 }
 
 #header {
   border: 2px solid blue;
-  padding: 40px;
+  padding: 1%;
   color: white;
   letter-spacing: 3px;
   float: left;
@@ -71,7 +72,7 @@ code {
 
 #toolbar {
   border: 2px solid blue;
-  padding: 40px;
+  padding: 2%;
   width: 75%;
   float: left;
   display: inline-flex;
@@ -87,20 +88,21 @@ code {
 #sidebar {
   float: left;
   border: 2px solid blue;
-  padding: 10px;
+  padding: 2%;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
 }
 
 img {
-  padding-bottom: 30px;
+  padding-bottom: 5%;
+  width:100%;
 }
 
 #stats-container {
   border: 2px solid red;
   overflow: hidden;
-  padding: 5px;
+  padding: 0.2%;
   height: auto;
   width: 85%;
   float: left;
@@ -108,7 +110,7 @@ img {
 
 #stats-area {
   border: 2px solid blue;
-  padding: 5px;
+  padding: 0.4%;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
@@ -119,18 +121,21 @@ img {
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
+  border-bottom: solid 2px white;
 }
 
 #pie-area {
   border: 2px solid blue;
-  padding: 5px;
+  padding: 0.4%;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
 }
 
 .dropdown-basic-button {
-  margin: 10px;
+  text-align: center;
+  width: 20%;
+  margin: 0.5%;
 }
 
 .dropdown-basic-button:hover {
@@ -139,12 +144,20 @@ img {
 
 #main-content-area {
   border: 3px solid green;
-  padding-left: 10px;
+  padding-left: 0.8%;
   overflow: hidden;
 }
 
 #vertical {
   border-left: 6px solid white;
-  height: 80px;
+  height: 100px;
   opacity: 60%;
+}
+
+.vr {
+  background-color: white;
+}
+
+.d-flex {
+  background-color: white;
 }

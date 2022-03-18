@@ -78,8 +78,8 @@ code {
 #sidebar-container {
   border: 2px solid red;
   overflow: hidden;
-  display: inline-block;
   padding: 20px;
+  float: left;
 }
 
 #sidebar {
@@ -93,4 +93,37 @@ code {
 
 img {
   padding-bottom: 30px;
+}
+
+#stats-container {
+  border: 2px solid red;
+  overflow: hidden;
+  display: inline-block;
+  padding: 10px;
+  height: auto;
+  width: auto;
+}
+
+#stats-area {
+  border: 2px solid blue;
+  padding: 10px;
+  color: white;
+  letter-spacing: 3px;
+  background-color: rgb(43, 43, 46);
+}
+
+#chart-area {
+  border: 2px solid blue;
+  padding: 10px;
+  color: white;
+  letter-spacing: 3px;
+  background-color: rgb(43, 43, 46);
+}
+
+#pie-area {
+  border: 2px solid blue;
+  padding: 10px;
+  color: white;
+  letter-spacing: 3px;
+  background-color: rgb(43, 43, 46);
 }

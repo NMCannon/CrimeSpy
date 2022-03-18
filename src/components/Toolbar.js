@@ -8,22 +8,29 @@ class Toolbar extends Component {
     super();
 
     this.state = {
-      dropDownValue: "Select an item"
+      dropDownValueYear: "Select Year",
+      dropDownValueCrime: "Select Crime"
     }
   }
 
   changeValue(text) {
-    this.setState({dropDownValue: text})
+    this.setState({dropDownValueYear: text})
+  }
+
+  changeValueCrime(text) {
+    this.setState({dropDownValueCrime: text})
   }
 
   render() {
     return (
       <div id="toolbar">
         <Button text="Map"/>
-        <Button text="Stats"/>#
+        <Button text="Statistics"/>
 
-        <DropdownButton id="dropdown-basic-button" menuVariant="dark" drop="right" title={this.state.dropDownValue}>
-          <Dropdown.Item class="dropbutton" href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2022</div></Dropdown.Item>
+        <div id = "vertical"></div>
+
+        <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueYear}>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2022</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2021</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2020</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2019</div></Dropdown.Item>
@@ -33,6 +40,17 @@ class Toolbar extends Component {
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2015</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2014</div></Dropdown.Item>
         </DropdownButton>
+
+        <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueCrime}>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ASSAULT</div></Dropdown.Item>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>BURGLARY</div></Dropdown.Item>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>HOMICIDE</div></Dropdown.Item>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>MOTOR VEHICLE THEFT</div></Dropdown.Item>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ROBBERY</div></Dropdown.Item>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>SEXUAL ABUSE</div></Dropdown.Item>
+        </DropdownButton>
+
+        <Button text="Apply"/>
       </div>
     )
   }

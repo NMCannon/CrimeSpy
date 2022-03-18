@@ -38,11 +38,11 @@ code {
 
 #root button:hover,
 #root button:focus {
+    cursor: pointer;
     background: black;
 }
 
 #root button:focus {
-    outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
@@ -74,6 +74,7 @@ code {
   padding: 40px;
   width: 75%;
   float: left;
+  display: inline-flex;
 }
 
 #sidebar-container {
@@ -99,7 +100,6 @@ img {
 #stats-container {
   border: 2px solid red;
   overflow: hidden;
-  display: inline-block;
   padding: 5px;
   height: auto;
   width: 85%;
@@ -116,7 +116,6 @@ img {
 
 #chart-area {
   border: 2px solid blue;
-  padding: 5px;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
@@ -130,12 +129,22 @@ img {
   background-color: rgb(43, 43, 46);
 }
 
-#dropdown-basic-button {
+.dropdown-basic-button {
   margin: 10px;
+}
+
+.dropdown-basic-button:hover {
+  cursor: pointer;
 }
 
 #main-content-area {
   border: 3px solid green;
-  padding: 10px;
+  padding-left: 10px;
   overflow: hidden;
+}
+
+#vertical {
+  border-left: 6px solid white;
+  height: 80px;
+  opacity: 60%;
 }

@@ -1,4 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Stats from './components/Stats';
@@ -7,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Stats />
-      <Sidebar />
+      <div id="main-content-area">
+        <Sidebar />
+        <Stats />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-* {
+#root {
   background-color: #1b1c1f;
 }
 
@@ -66,26 +66,27 @@ code {
   color: white;
   letter-spacing: 3px;
   float: left;
+  width: 25%;
 }
 
 #toolbar {
   border: 2px solid blue;
   padding: 40px;
-  margin-right: 800px;
+  width: 75%;
   float: left;
 }
 
 #sidebar-container {
   border: 2px solid red;
   overflow: hidden;
-  padding: 20px;
   float: left;
+  width: 15%;
 }
 
 #sidebar {
   float: left;
   border: 2px solid blue;
-  padding: 20px;
+  padding: 10px;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
@@ -99,14 +100,15 @@ img {
   border: 2px solid red;
   overflow: hidden;
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   height: auto;
-  width: auto;
+  width: 85%;
+  float: left;
 }
 
 #stats-area {
   border: 2px solid blue;
-  padding: 10px;
+  padding: 5px;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
@@ -114,7 +116,7 @@ img {
 
 #chart-area {
   border: 2px solid blue;
-  padding: 10px;
+  padding: 5px;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
@@ -122,8 +124,18 @@ img {
 
 #pie-area {
   border: 2px solid blue;
-  padding: 10px;
+  padding: 5px;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
+}
+
+#dropdown-basic-button {
+  margin: 10px;
+}
+
+#main-content-area {
+  border: 3px solid green;
+  padding: 10px;
+  overflow: hidden;
 }

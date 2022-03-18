@@ -5,7 +5,7 @@ export default function Header() {
     <div id="header-container">
         <div id="header">
             <img src="logo.png"></img>
-            <h5>Prediction & Statistics</h5>
+            <h5>Crime Prediction & Statistics</h5>
         </div>
         <Toolbar />
     </div>

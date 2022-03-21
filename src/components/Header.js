@@ -1,13 +1,16 @@
-import Toolbar from "./Toolbar"
+import React, { Component } from 'react'
 
-export default function Header() {
-  return (
-    <div id="header-container">
+class Header extends Component {
+  render() {
+    return (
+      <div id="header-container">
         <div id="header">
-            <img src="logo.png"></img>
-            <h5>Crime Prediction & Statistics</h5>
+          <img src="logo.png" alt="logo"></img>
+          <h5>Crime Prediction & Statistics</h5>
         </div>
-        <Toolbar />
     </div>
-  )
+    )
+  }
 }
+
+export default Header

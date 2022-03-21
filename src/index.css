@@ -1,3 +1,7 @@
+* {
+  background-color: #1b1c1f;
+}
+
 #root {
   background-color: #1b1c1f;
 }
@@ -58,7 +62,8 @@ code {
   border: 2px solid red;
   padding: 1%;
   overflow: hidden;
-  width: 100%;
+  width: 25%;
+  float: left;
 }
 
 #header {
@@ -67,15 +72,15 @@ code {
   color: white;
   letter-spacing: 3px;
   float: left;
-  width: 25%;
+  width: 100%;
 }
 
 #toolbar {
   border: 2px solid blue;
   padding: 2%;
-  width: 75%;
-  float: left;
   display: inline-flex;
+  width: 75%;
+  margin-top: 2%;
 }
 
 #sidebar-container {
@@ -99,29 +104,14 @@ img {
   width:100%;
 }
 
-#stats-container {
-  border: 2px solid red;
-  overflow: hidden;
-  padding: 0.2%;
-  height: auto;
-  width: 85%;
-  float: left;
-}
-
-#stats-area {
-  border: 2px solid blue;
-  padding: 0.4%;
-  color: white;
-  letter-spacing: 3px;
-  background-color: rgb(43, 43, 46);
-}
-
 #chart-area {
   border: 2px solid blue;
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
   border-bottom: solid 2px white;
+  float: left;
+  width: 85%;
 }
 
 #pie-area {
@@ -130,6 +120,8 @@ img {
   color: white;
   letter-spacing: 3px;
   background-color: rgb(43, 43, 46);
+  float: left;
+  width: 85%;
 }
 
 .dropdown-basic-button {
@@ -146,6 +138,7 @@ img {
   border: 3px solid green;
   padding-left: 0.8%;
   overflow: hidden;
+  float: left;
 }
 
 #vertical {

@@ -12,6 +12,9 @@ class Toolbar extends Component {
       dropDownValueCrime: "Select Crime"
     }
   }
+  click = () => {
+    this.props.parentMethod();
+  }
 
   changeValue(text) {
     this.setState({dropDownValueYear: text})
@@ -32,6 +35,7 @@ class Toolbar extends Component {
         </div>
 
         <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueYear}>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ALL</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2022</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2021</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2020</div></Dropdown.Item>
@@ -44,6 +48,7 @@ class Toolbar extends Component {
         </DropdownButton>
 
         <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueCrime}>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ALL</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ASSAULT</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>BURGLARY</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>HOMICIDE</div></Dropdown.Item>
@@ -52,7 +57,7 @@ class Toolbar extends Component {
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>SEXUAL ABUSE</div></Dropdown.Item>
         </DropdownButton>
 
-        <Button text="Apply"/>
+        <button id="apply-btn" onClick={this.click}>Apply</button>
       </div>
     )
   }

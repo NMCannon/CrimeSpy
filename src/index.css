@@ -62,13 +62,14 @@ code {
 #header-container {
   border: 2px solid red;
   overflow: hidden;
-  width: 25%;
+  width: 20%;
   float: left;
+  margin-left: 1%;
 }
 
 #header {
   border: 2px solid blue;
-  padding: 1%;
+  padding: 3%;
   color: white;
   letter-spacing: 3px;
   float: left;
@@ -77,11 +78,22 @@ code {
 
 #toolbar {
   border: 2px solid blue;
-  padding: 2%;
   display: inline-flex;
-  width: 70%;
-  margin-top: 1%;
+  width: 60%;
+  margin-left: 5%;
   border-bottom: solid 2px white;
+  background-color: #1b1c1f;
+  border-radius: 6px;
+  padding:2%;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  padding: 1%;
+  border: solid 2px pink;
 }
 
 #sidebar-container {

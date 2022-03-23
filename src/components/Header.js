@@ -6,7 +6,7 @@ class Header extends Component {
       <div id="header-container">
         <div id="header">
           <img src="logo.png" alt="logo"></img>
-          <h5>Crime Prediction & Statistics</h5>
+          <h4>Crime Prediction & Statistics</h4>
         </div>
     </div>
     )

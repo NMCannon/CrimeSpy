@@ -35,7 +35,7 @@ class Toolbar extends Component {
         </div>
 
         <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueYear}>
-          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ALL</div></Dropdown.Item>
+          <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>ALL</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2022</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2021</div></Dropdown.Item>
           <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2020</div></Dropdown.Item>

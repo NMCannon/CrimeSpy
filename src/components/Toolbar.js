@@ -8,34 +8,41 @@ class Toolbar extends Component {
     super();
 
     this.state = {
-      dropDownValueYear: "Select Year",
-      dropDownValueCrime: "Select Crime"
+      year: "Select Year",
+      crime: "Select Crime",
+      map: false
     }
   }
-  click = () => {
+  applyFilter = () => {
+    this.setState({map: false})
+    this.props.parentMethod();
+  }
+
+  mapChange = () => {
+    this.setState({map: true})
     this.props.parentMethod();
   }
 
   changeValue(text) {
-    this.setState({dropDownValueYear: text})
+    this.setState({year: text})
   }
 
   changeValueCrime(text) {
-    this.setState({dropDownValueCrime: text})
+    this.setState({crime: text})
   }
 
   render() {
     return (
       <div id="toolbar-container">
         <div id="toolbar">
-          <Button text="Map"/>
+          <button id="map-btn" onClick={this.mapChange}>Map</button>
           <Button text="Statistics"/>
 
           <div className="d-flex">
             <div className="vr" style={{currentColor: 'white'}}></div>
           </div>
 
-          <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueYear}>
+          <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.year}>
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>ALL</div></Dropdown.Item>
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2022</div></Dropdown.Item>
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2021</div></Dropdown.Item>
@@ -48,7 +55,7 @@ class Toolbar extends Component {
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValue(e.target.textContent)}>2014</div></Dropdown.Item>
           </DropdownButton>
 
-          <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.dropDownValueCrime}>
+          <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.crime}>
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ALL</div></Dropdown.Item>
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ASSAULT</div></Dropdown.Item>
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>BURGLARY</div></Dropdown.Item>
@@ -58,7 +65,7 @@ class Toolbar extends Component {
             <Dropdown.Item href="#/action-2"><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>SEXUAL ABUSE</div></Dropdown.Item>
           </DropdownButton>
 
-          <button id="apply-btn" onClick={this.click}>Apply</button>
+          <button id="apply-btn" onClick={this.applyFilter}>Apply</button>
         </div>
       </div>
     )

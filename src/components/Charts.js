@@ -7,25 +7,36 @@ class Charts extends Component {
     super(props);
     this.state = {
       year: null,
-      crime: null
+      crime: null,
+      map: false
     }
   }
 
   // Update state
-  changeState = (newyear, newcrime) => {
+  changeState = (newyear, newcrime, newmap) => {
     this.setState({year: newyear});
     this.setState({crime: newcrime});
+    this.setState({map: newmap});
   }
 
   render() {
-    console.log("charts year is "+this.state.year+" and crime is "+this.state.crime);
+    console.log("charts year is "+this.state.year+" and crime is "+this.state.crime+" and map is "+this.state.map);
+    if(this.state.map===true)
+    {
+      return (
+        <div id="chart-area">
+          <iframe title="html example" width="100%" height="650" frameBorder="0" scrolling="no" src="/plots/file4.html"></iframe>
+        </div>
+      )
+    }
+
     switch(this.state.year)
     {
       case "ALL":
       default:
         return (
           <div id="chart-area">
-            <iframe title="allchart" width="100%" height="800" frameBorder="0" scrolling="no" src="//plotly.com/~NCannon/7.embed?modebar=false&link=false"></iframe>
+            <iframe title="allchart" width="100%" height="650" frameBorder="0" scrolling="no" src="//plotly.com/~NCannon/7.embed?modebar=false&link=false"></iframe>
           </div>
         )
       case "2018":

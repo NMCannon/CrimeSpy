@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Charts from './components/Charts';
 import Header from './components/Header';
-import Piecharts from './components/Piecharts';
+import StatsLower from './components/StatsLower';
 import Sidebar from './components/Sidebar';
 import Toolbar from './components/Toolbar';
 
@@ -55,7 +55,7 @@ class App extends Component {
           <h1>Washington D.C.</h1>
           <Sidebar />
           <Charts ref={this.chartsRef}/>
-          <Piecharts ref={this.pieRef}/>
+          <StatsLower ref={this.pieRef}/>
         </div>
       </div>
     )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Piecharts extends Component {
+class StatsLower extends Component {
 
   constructor(props)
   {
@@ -28,4 +28,4 @@ class Piecharts extends Component {
   }
 }
 
-export default Piecharts
+export default StatsLower

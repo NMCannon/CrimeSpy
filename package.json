@@ -1,5 +1,6 @@
 {
   "name": "crimespy-app",
+  "homepage": "http://crimespy.ie",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -10,17 +10,21 @@ class Toolbar extends Component {
     this.state = {
       year: "Select Year",
       crime: "Select Crime",
+      stattype: "Statistics",
       map: false
     }
   }
   applyFilter = () => {
-    this.setState({map: false})
     this.props.parentMethod();
   }
 
-  mapChange = () => {
+  mapChangeTrue = () => {
     this.setState({map: true})
-    this.props.parentMethod();
+    this.setState({stattype: "Map"})
+  }
+
+  mapChangeFalse = () => {
+    this.setState({map: false})
   }
 
   changeValue(text) {
@@ -35,8 +39,10 @@ class Toolbar extends Component {
     return (
       <div id="toolbar-container">
         <div id="toolbar">
-          <button id="map-btn" onClick={this.mapChange}>Map</button>
-          <Button text="Statistics"/>
+          <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.stattype}>
+            <Dropdown.Item href="#/action-2"><div onClick={this.mapChangeFalse}>Statistics</div></Dropdown.Item>
+            <Dropdown.Item href="#/action-2"><div onClick={this.mapChangeTrue}>Map</div></Dropdown.Item>
+          </DropdownButton>
 
           <div className="d-flex">
             <div className="vr" style={{currentColor: 'white'}}></div>
@@ -66,6 +72,10 @@ class Toolbar extends Component {
           </DropdownButton>
 
           <button id="apply-btn" onClick={this.applyFilter}>Apply</button>
+          <div className="d-flex">
+            <div className="vr" style={{currentColor: 'white'}}></div>
+          </div>
+          <Button text="About"/>
         </div>
       </div>
     )

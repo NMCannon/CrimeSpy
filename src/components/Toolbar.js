@@ -25,6 +25,7 @@ class Toolbar extends Component {
 
   mapChangeFalse = () => {
     this.setState({map: false})
+    this.setState({stattype: "Chart"})
   }
 
   changeValue(text) {
@@ -40,7 +41,7 @@ class Toolbar extends Component {
       <div id="toolbar-container">
         <div id="toolbar">
           <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.stattype}>
-            <Dropdown.Item href="#/action-2"><div onClick={this.mapChangeFalse}>Statistics</div></Dropdown.Item>
+            <Dropdown.Item href="#/action-2"><div onClick={this.mapChangeFalse}>Chart</div></Dropdown.Item>
             <Dropdown.Item href="#/action-2"><div onClick={this.mapChangeTrue}>Map</div></Dropdown.Item>
           </DropdownButton>
 

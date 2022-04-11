@@ -19,14 +19,14 @@ class App extends Component {
     }
     this.toolbarRef= React.createRef();
     this.chartsRef= React.createRef();
-    this.pieRef= React.createRef();
+    this.statsRef= React.createRef();
   }
 
-  // Get states of children (toolbar, charts and piecharts)
+  // Get states of children (toolbar, charts and statslower)
   getChildState = () => {
     let toolbarelement = this.toolbarRef.current;
     let chartselement = this.chartsRef.current;
-    let pieelement = this.pieRef.current;
+    let statselement = this.statsRef.current;
 
     let newyear = toolbarelement.state.year;
     let newcrime = toolbarelement.state.crime;
@@ -41,12 +41,11 @@ class App extends Component {
     // Pass new state to charts
     chartselement.changeState(newyear, newcrime, newmap);
 
-    // Pass new states to piecharts
-    pieelement.changeState(newyear, newcrime);
+    // Pass new states to statslower
+    statselement.changeState(newyear, newcrime);
   }
 
   render() {
-    console.log("parent year is "+this.state.year+" and map is "+this.state.map);
     return (
       <div className="App">
         <Header />
@@ -55,7 +54,7 @@ class App extends Component {
           <h1>Washington D.C.</h1>
           <Sidebar />
           <Charts ref={this.chartsRef}/>
-          <StatsLower ref={this.pieRef}/>
+          <StatsLower ref={this.statsRef}/>
         </div>
       </div>
     )

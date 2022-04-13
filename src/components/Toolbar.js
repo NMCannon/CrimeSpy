@@ -14,28 +14,34 @@ class Toolbar extends Component {
       map: false
     }
   }
+  // Call parent method
   applyFilter = () => {
     this.props.parentMethod();
   }
 
+  // Set map value to true and update dropdown title
   mapChangeTrue = () => {
     this.setState({map: true})
     this.setState({stattype: "Map"})
   }
 
+  // Set map value to false and update dropdown title
   mapChangeFalse = () => {
     this.setState({map: false})
     this.setState({stattype: "Chart"})
   }
 
+  // Update year select dropdown title
   changeValue(text) {
     this.setState({year: text})
   }
 
+  // Update crime select dropdown title
   changeValueCrime(text) {
     this.setState({crime: text})
   }
 
+  // Render toolbar
   render() {
     return (
       <div id="toolbar-container">
@@ -51,15 +57,11 @@ class Toolbar extends Component {
 
           <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.year}>
             <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>ALL</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2022</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2022-2025</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2021</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2020</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2019</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2018</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2017</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2016</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2015</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2014</div></Dropdown.Item>
           </DropdownButton>
 
           <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.crime}>

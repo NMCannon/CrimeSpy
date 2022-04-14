@@ -15,7 +15,8 @@ class App extends Component {
     this.state = {
       year: null,
       crime: null,
-      map: false
+      map: false,
+      about: false
     }
     this.toolbarRef= React.createRef();
     this.chartsRef= React.createRef();
@@ -31,18 +32,20 @@ class App extends Component {
     let newyear = toolbarelement.state.year;
     let newcrime = toolbarelement.state.crime;
     let newmap = toolbarelement.state.map;
-    console.log("toolbar year is "+newyear+" amd crime is "+newcrime);
+    let newabout = toolbarelement.state.about;
+    console.log("toolbar year is "+newyear+" and crime is "+newcrime+"and about is "+newabout);
 
     // Update parent states
     this.setState({year: newyear});
     this.setState({crime: newcrime});
     this.setState({map: newmap});
+    this.setState({about: newabout});
 
     // Pass new state to charts
-    chartselement.changeState(newyear, newcrime, newmap);
+    chartselement.changeState(newyear, newcrime, newmap, newabout);
 
     // Pass new states to statslower
-    statselement.changeState(newyear, newcrime);
+    statselement.changeState(newyear, newcrime, newabout);
   }
 
   render() {
@@ -51,7 +54,6 @@ class App extends Component {
         <Header />
         <Toolbar ref={this.toolbarRef} parentMethod={this.getChildState}></Toolbar>
         <div id="main-content-area">
-          <h1>Washington D.C.</h1>
           <Sidebar />
           <Charts ref={this.chartsRef}/>
           <StatsLower ref={this.statsRef}/>

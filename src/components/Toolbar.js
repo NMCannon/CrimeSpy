@@ -11,11 +11,15 @@ class Toolbar extends Component {
       year: "Select Year",
       crime: "Select Crime",
       stattype: "Chart",
-      map: false
+      map: false,
+      about: false
     }
+
+    this.changeValueAbout = this.changeValueAbout.bind(this);
   }
   // Call parent method
   applyFilter = () => {
+    this.setState({about: false})
     this.props.parentMethod();
   }
 
@@ -23,22 +27,32 @@ class Toolbar extends Component {
   mapChangeTrue = () => {
     this.setState({map: true})
     this.setState({stattype: "Map"})
+    this.setState({about: false})
   }
 
   // Set map value to false and update dropdown title
   mapChangeFalse = () => {
     this.setState({map: false})
     this.setState({stattype: "Chart"})
+    this.setState({about: false})
   }
 
   // Update year select dropdown title
-  changeValue(text) {
+  changeValueYear(text) {
     this.setState({year: text})
+    this.setState({about: false})
   }
 
   // Update crime select dropdown title
   changeValueCrime(text) {
     this.setState({crime: text})
+    this.setState({about: false})
+  }
+
+  // Update about state and call parent method
+  changeValueAbout() {
+    this.setState({about: true})
+    this.props.parentMethod();
   }
 
   // Render toolbar
@@ -56,12 +70,12 @@ class Toolbar extends Component {
           </div>
 
           <DropdownButton className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.year}>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>ALL</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2022-2025</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2021</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2020</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2019</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValue(e.target.textContent)}>2018</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueYear(e.target.textContent)}>ALL</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueYear(e.target.textContent)}>2022-2025</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueYear(e.target.textContent)}>2021</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueYear(e.target.textContent)}>2020</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueYear(e.target.textContent)}>2019</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueYear(e.target.textContent)}>2018</div></Dropdown.Item>
           </DropdownButton>
 
           <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.crime}>
@@ -80,7 +94,7 @@ class Toolbar extends Component {
           <div className="d-flex">
             <div className="vr" style={{currentColor: 'white'}}></div>
           </div>
-          <Button text="About"/>
+          <button id="about-btn" onClick={this.changeValueAbout}>About</button>
         </div>
       </div>
     )

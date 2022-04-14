@@ -31,12 +31,38 @@ class StatsLower extends Component {
     }
     else
     {
-      return (
-        <div id="statslower-area">
-          <iframe title="4" width="50%" height="400" frameBorder="0" scrolling="no" src="//plotly.com/~NCannon/3.embed?modebar=false&link=false"></iframe>
-          <iframe title="5" width="50%" height="400" frameBorder="0" scrolling="no" src="//plotly.com/~NCannon/3.embed?modebar=false&link=false"></iframe>
-        </div>
-      )
+      switch(this.state.year)
+      {
+        case "2021":
+        default:
+          return (
+            <div id="statslower-area">
+              <iframe title="6" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/25.embed?link=false"></iframe>
+              <iframe title="5" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/29.embed?link=false"></iframe>
+            </div>
+          )
+        case "2020":
+          return (
+            <div id="statslower-area">
+              <iframe title="7" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/23.embed?link=false"></iframe>
+              <iframe title="8" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/27.embed?link=false"></iframe>
+            </div>
+          )
+        case "2019":
+          return (
+            <div id="statslower-area">
+              <iframe title="10" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/21.embed?link=false"></iframe>
+              <iframe title="11" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/31.embed?link=false"></iframe>
+            </div>
+          )
+        case "2018":
+          return (
+            <div id="statslower-area">
+              <iframe title="15" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/3.embed?link=false"></iframe>
+              <iframe title="13" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/33.embed?link=false"></iframe>
+            </div>
+          )
+      }
     }
 
   }

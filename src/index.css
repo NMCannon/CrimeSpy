@@ -114,8 +114,11 @@ img {
 }
 
 img {
-  padding-bottom: 5%;
   width:100%;
+}
+
+h4 {
+  padding-top: 5%;
 }
 
 #chart-area {

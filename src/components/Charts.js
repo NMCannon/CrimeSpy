@@ -26,7 +26,7 @@ class Charts extends Component {
     {
       return (
         <div id="chart-area">
-          <p>CrimeSpy was developed using ReactJS. The datasets used to generate these predictions can be found using the link below.</p>
+          <p>CrimeSpy was developed using ReactJS. The datasets used to generate these predictions were aqquired from opendata.gc.gov.</p>
           <p><a href="https://opendata.dc.gov/search?collection=Dataset">CRIME DATASETS</a>
           </p>
         </div>
@@ -73,22 +73,15 @@ class Charts extends Component {
     // Else check selected year and display appropriate chart
     switch(this.state.year)
     {
-      case "ALL":
-      default:
+      case "Forecast":
         return (
           <div id="chart-area">
             <h1>Washington D.C</h1>
             <iframe title="html" width="100%" height="650" frameBorder="0" scrolling="no" src="/plots/2010-2025chart_all.html"></iframe>
           </div>
         )
-      case "2022-2025":
-        return (
-          <div id="chart-area">
-            <h1>Washington D.C</h1>
-            <iframe title="html" width="100%" height="650" frameBorder="0" scrolling="no" src="/plots/2022-2025chart_all.html"></iframe>
-          </div>
-        )
       case "2021":
+      default:
         return (
           <div id="chart-area">
             <h1>Washington D.C</h1>

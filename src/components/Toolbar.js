@@ -65,13 +65,15 @@ class Toolbar extends Component {
           </DropdownButton>
 
           <DropdownButton  className="dropdown-basic-button" id="year-dropdown" menuVariant="dark" drop="right" title={this.state.crime}>
-            <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ALL</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>NONE</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ASSAULT</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>BURGLARY</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>HOMICIDE</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>MOTOR VEHICLE THEFT</div></Dropdown.Item>
             <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ROBBERY</div></Dropdown.Item>
-            <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>SEXUAL ABUSE</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>SEXUAL ASSAULT</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>THEFT</div></Dropdown.Item>
+            <Dropdown.Item><div onClick={(e) => this.changeValueCrime(e.target.textContent)}>ALL</div></Dropdown.Item>
           </DropdownButton>
 
           <button id="apply-btn" onClick={this.applyFilter}>Apply</button>

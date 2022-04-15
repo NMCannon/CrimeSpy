@@ -22,6 +22,7 @@ class Charts extends Component {
   }
 
   render() {
+    // If "about" selected render text
     if(this.state.about===true)
     {
       return (
@@ -81,6 +82,7 @@ class Charts extends Component {
             <iframe title="html" width="100%" height="650" frameBorder="0" scrolling="no" src="/plots/2010-2025chart_all.html"></iframe>
           </div>
         )
+      // IF YEAR IS 2021
       case "2021":
       default:
         switch(this.state.crime)
@@ -150,6 +152,7 @@ class Charts extends Component {
               </div>
             )
         }
+      // IF YEAR IS 2020
       case "2020":
         switch(this.state.crime)
         {
@@ -218,6 +221,7 @@ class Charts extends Component {
               </div>
             )
         }
+      // IF YEAR IS 2019
       case "2019":
         return (
           <div id="chart-area">
@@ -225,6 +229,7 @@ class Charts extends Component {
               <iframe title="html" width="100%" height="650" frameBorder="0" scrolling="no" src="/plots/2019chart_all.html"></iframe>
           </div>
         )
+      // IF YEAR IS 2018
       case "2018":
         return (
           <div id="chart-area">

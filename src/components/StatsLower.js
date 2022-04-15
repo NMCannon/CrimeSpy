@@ -22,6 +22,7 @@ class StatsLower extends Component {
   render() {
     console.log("statslower year is "+this.state.year+" and crime is "+this.state.crime);
 
+    // If "about" selected render nothing
     if(this.state.about===true)
     {
       return (
@@ -31,6 +32,7 @@ class StatsLower extends Component {
     }
     else
     {
+      // Check selected year
       switch(this.state.year)
       {
         case "2021":

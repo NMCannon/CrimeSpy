@@ -62,6 +62,12 @@ class StatsLower extends Component {
               <iframe title="13" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/33.embed?link=false"></iframe>
             </div>
           )
+        case "Forecast":
+          return (
+            <div id="statslower-area">
+              <iframe title="14" width="50%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~NCannon/36.embed?link=false"></iframe>
+            </div>
+          )
       }
     }
 
